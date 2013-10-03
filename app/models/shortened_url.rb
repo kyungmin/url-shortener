@@ -18,6 +18,13 @@ class ShortenedUrl < ActiveRecord::Base
     :primary_key => :id
   )
 
+  has_many(
+  :tags,
+  :class_name => 'Tag',
+  :foreign_key => :shortened_url_id,
+  :primary_key => :id
+  )
+
   has_many :visitors, :through => :visits, :source => :visitor, :uniq => true
 
   def self.random_code

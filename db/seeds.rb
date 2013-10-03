@@ -17,5 +17,10 @@ ActiveRecord::Base.transaction do
     { submitter_id:2, short_url:"2353436", long_url:"www.google.com" },
     { submitter_id:2, short_url:"126335", long_url:"www.yahoo.com" },
   ])
+  tag_topics = TagTopic.create([
+    {topic:"news"},
+    {topic:"sports"},
+    {topic:"music"}
+  ])
 end
 
